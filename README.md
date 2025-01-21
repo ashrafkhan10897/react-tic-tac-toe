@@ -22,7 +22,7 @@ Follow these steps to set up the project on your local Windows machine:
 
 1. **Clone the repository:**
    Open your terminal (Command Prompt or PowerShell) and run the following command to clone the project:
-   ```git clone https://github.com/your-username/tic-tac-toe-react.git```
+   ```git clone https://github.com/ashrafkhan10897/react-tic-tac-toe.git```
 2. **Navigate to the project directory:**
    ```cd tic-tac-toe-react```
 3. **Install dependencies:**
