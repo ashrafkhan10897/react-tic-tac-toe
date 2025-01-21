@@ -22,15 +22,20 @@ Follow these steps to set up the project on your local Windows machine:
 
 1. **Clone the repository:**
    Open your terminal (Command Prompt or PowerShell) and run the following command to clone the project:
-   ```git clone https://github.com/ashrafkhan10897/react-tic-tac-toe.git```
+   ```bash
+   git clone https://github.com/ashrafkhan10897/react-tic-tac-toe.git
 2. **Navigate to the project directory:**
-   ```cd tic-tac-toe-react```
+   ```bash
+   cd tic-tac-toe-react
 3. **Install dependencies:**
-   ```npm install```
+   ```bash
+   npm install
 4. **Run the following command:**
-   ```npm run build```
+   ```bash
+   npm run build
 5. **Open the below url in browser**
-   ```http://localhost:5173/```   
+   
+   http://localhost:5173/   
 
 
 This `README.md` provides detailed steps for setting up and running the Tic Tac Toe React project on a Windows machine. Let me know if you'd like to add more sections!
