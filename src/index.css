@@ -1,0 +1,218 @@
+/* Universal Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: #f0f0f0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+}
+
+h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+code {
+  font-size: 1.2em;
+  background: rgba(255, 255, 255, 0.1);
+  color: #00e6e6;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-family: 'Courier New', Courier, monospace;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Board Styles */
+.game {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Center the board */
+  align-items: flex-start; 
+  padding: 40px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.square {
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  border: 2px solid #ffffff;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 50px;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.square:hover {
+  background: linear-gradient(135deg, #ff758c, #ff7eb3);
+  transform: scale(1.1);
+  cursor: pointer;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.board-row:after {
+  clear: both;
+  content: '';
+  display: table;
+}
+
+/* Moves Button Styling */
+button {
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  margin: 5px;
+  color: #ffffff;
+  background: linear-gradient(135deg, #00b09b, #96c93d); /* Green gradient */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.4); /* Depth */
+}
+
+button:hover {
+  background: linear-gradient(135deg, #96c93d, #00b09b); /* Reversed gradient */
+  transform: scale(1.05); /* Slightly bigger on hover */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+button:active {
+  transform: scale(0.95); /* Shrink on click */
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Status Section */
+.status {
+  margin-bottom: 20px;
+  padding: 15px 20px;
+  background: linear-gradient(135deg, #00b09b, #96c93d);
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
+  animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #96c93d;
+  }
+  to {
+    box-shadow: 0 0 20px #96c93d;
+  }
+}
+
+/* Game Info Section */
+.game-info {
+  margin-left: 40px;
+  /* padding: 100px; */
+  font-size: 18px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 12px;
+  color: #ffffff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+}
+ol {
+  padding-left: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .square {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .game-info {
+    font-size: 16px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
+
+/* Glowing Text Animation for .app */
+.app {
+  font-size: 4rem;
+  text-align: center;  
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  position: relative;
+  animation: glowing 1.5s ease-in-out infinite alternate, slideIn 1s ease-out forwards;
+  
+  margin: 10px auto;
+}
+
+@keyframes glowing {
+  0% {
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.6), 0 0 10px rgba(0, 255, 255, 0.6), 0 0 15px rgba(0, 255, 255, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.9), 0 0 20px rgba(0, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.7);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.app:hover {
+  color: #ff4081;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
